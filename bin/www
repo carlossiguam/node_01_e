@@ -1,0 +1,21 @@
+#!/usr/bin/nodejs
+var log4js = require('log4js');
+var logger = log4js.getLogger('app-iot');
+
+
+
+var debug = require('debug')('my-application');
+var app = require('../app');
+
+
+var portAPP = 3002;
+app.set('port', process.env.PORT || portAPP);
+
+var server = app.listen(app.get('port'), function() {
+  
+  logger.level = 'debug';
+  logger.debug("Express server listening on port "  + server.address().port);
+  
+
+});
+
