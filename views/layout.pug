@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+   
+   title= title
+   link(rel='stylesheet', href='/stylesheets/style.css')
+   link(rel='stylesheet', href='/stylesheets/navbar.css')
+  body
+   header
+    block navbar
+    nav#main-menu
+     ul.nav-bar
+      li.nav-button-home
+       a(href='/') Home
+      li.nav-button-network
+       a(href='network') Network
+      li.nav-button-products
+       a.btn(data-popup-open='popup-1', href='/') Login
+
+   footer
+
+   block content
+   
